@@ -1,4 +1,5 @@
 from flask import Flask,render_template
+import socket
 
 app = Flask(__name__)
 
@@ -7,7 +8,7 @@ def index():
     try:
         name = "Mahmoud Abd Alziem"
         age = 24
-        return render_template('index.html', name, age)
+        return render_template('index.html', name=name, age=age)
     except:
         return render_template('error.html')
 
